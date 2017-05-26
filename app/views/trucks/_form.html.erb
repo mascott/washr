@@ -1,0 +1,32 @@
+<%= form_with(model: truck, local: true) do |form| %>
+  <% if truck.errors.any? %>
+    <div id="error_explanation">
+      <h2><%= pluralize(truck.errors.count, "error") %> prohibited this truck from being saved:</h2>
+
+      <ul>
+      <% truck.errors.full_messages.each do |message| %>
+        <li><%= message %></li>
+      <% end %>
+      </ul>
+    </div>
+  <% end %>
+
+  <div class="field">
+    <%= form.label :license_plate %>
+    <%= form.text_field :license_plate, id: :truck_license_plate %>
+  </div>
+
+  <div class="field">
+    <%= form.label :tailgate_up %>
+    <%= form.check_box :tailgate_up, id: :truck_tailgate_up %>
+  </div>
+
+  <div class="field">
+    <%= form.label :muddy %>
+    <%= form.check_box :muddy, id: :truck_muddy %>
+  </div>
+
+  <div class="actions">
+    <%= form.submit %>
+  </div>
+<% end %>

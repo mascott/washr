@@ -1,0 +1,19 @@
+<p id="notice"><%= notice %></p>
+
+<p>
+  <strong>License plate:</strong>
+  <%= @truck.license_plate %>
+</p>
+
+<p>
+  <strong>Bed down:</strong>
+  <%= @truck.tailgate_up %>
+</p>
+
+<p>
+  <strong>Muddy:</strong>
+  <%= @truck.muddy %>
+</p>
+
+<%= link_to 'Edit', edit_truck_path(@truck) %> |
+<%= link_to 'Back', trucks_path %>
