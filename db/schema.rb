@@ -10,7 +10,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20170526161250) do
+ActiveRecord::Schema.define(version: 20170526175154) do
 
   create_table "cars", force: :cascade do |t|
     t.string "license_plate"
@@ -22,6 +22,14 @@ ActiveRecord::Schema.define(version: 20170526161250) do
     t.string "license_plate"
     t.boolean "tailgate_up", default: true
     t.boolean "muddy", default: false
+    t.datetime "created_at", null: false
+    t.datetime "updated_at", null: false
+  end
+
+  create_table "washes", force: :cascade do |t|
+    t.float "price"
+    t.integer "washable_id"
+    t.string "washable_type"
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
   end

@@ -1,0 +1,27 @@
+<p id="notice"><%= notice %></p>
+
+<h1>Washes</h1>
+
+<%= link_to 'New Car', new_car_path %>
+<%= link_to 'New Truck', new_truck_path %>
+
+<table>
+  <thead>
+    <tr>
+      <th>Vehicle Type</th>
+      <th>License Plate</th>
+      <th>Price</th>
+      <th colspan="3"></th>
+    </tr>
+  </thead>
+
+  <tbody>
+    <% @washes.each do |wash| %>
+      <tr>
+        <td><%= wash.washable_type %></td>
+        <td><%= wash.license_plate %></td>
+        <td><%= wash.price %></td>
+      </tr>
+    <% end %>
+  </tbody>
+</table>
