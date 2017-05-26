@@ -1,7 +1,7 @@
 class Car < ApplicationRecord
   include Vehicle
 
-  has_many :washes, as: :washable, dependent: :destroy
+  has_one :wash, as: :washable, dependent: :destroy
 
   def price
     5

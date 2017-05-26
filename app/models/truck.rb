@@ -1,7 +1,7 @@
 class Truck < ApplicationRecord
   include Vehicle
 
-  has_many :washes, as: :washable, dependent: :destroy
+  has_one :wash, as: :washable, dependent: :destroy
 
   validates :tailgate_up, acceptance: { message: 'Tailgates must be up, please ask the customer to raise their tailgate.' }
 

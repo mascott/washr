@@ -1,5 +1,11 @@
 require 'rails_helper'
 
 RSpec.describe Car, type: :model do
-  pending "add some examples to (or delete) #{__FILE__}"
+  let(:car) { Car.new() }
+
+  describe '.price' do
+    it 'returns 5' do
+      expect(car.price).to eq(5)
+    end
+  end
 end
